@@ -21,5 +21,12 @@ class PostController < ApplicationController
     redirect_to("/")
   end
   def check
+    @post = Post.find(params[:id])
+    @check = params.fetch(:post, {}).permit(
+      :ok1,
+      :ok2,
+      :ok3,
+      :ok4
+    )
   end
 end

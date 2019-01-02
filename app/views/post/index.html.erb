@@ -7,13 +7,15 @@
                     <i class="fas fa-question"></i>
                 </div>
                 <div class="card-content">
+                    <%= form_tag("/check/" + post.id.to_s) do %>
                     <div class="field"><%= post.content %></div>
                     <hr/>
-                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer1 %></b-checkbox></div></div>
-                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer2 %></b-checkbox></div></div>
-                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer3 %></b-checkbox></div></div>
-                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer4 %></b-checkbox></div></div>
+                    <div class="field"><div class="control"><b-checkbox name="post[ok1]" native-value="true"><%= post.answer1 %></b-checkbox></div></div>
+                    <div class="field"><div class="control"><b-checkbox name="post[ok2]" native-value="true"><%= post.answer2 %></b-checkbox></div></div>
+                    <div class="field"><div class="control"><b-checkbox name="post[ok3]" native-value="true"><%= post.answer3 %></b-checkbox></div></div>
+                    <div class="field"><div class="control"><b-checkbox name="post[ok4]" native-value="true"><%= post.answer4 %></b-checkbox></div></div>
                     <div class="field"><div class="control"><button class="button is-link">回答</button></div></div>
+                    <% end %>
                 </div>
             </div>
         </div>

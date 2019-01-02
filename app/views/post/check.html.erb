@@ -1,0 +1,21 @@
+<section class="container body">
+    <div class="columns features">
+        <div class="column">
+            <div class="card is-shady">
+                <div class="card-image has-text-centered">
+                    <i class="fas fa-question"></i>
+                </div>
+                <div class="card-content">
+                    <div class="field"><%= @post.content %></div>
+                    <hr/>
+                    <div class="field"><div class="control"><span style="vertical-align:middle"><%= post_check_icon(@check.has_key?(:ok1), @post.ok1) %></b-icon></span> <%= @post.answer1 %></div></div>
+                    <div class="field"><div class="control"><span style="vertical-align:middle"><%= post_check_icon(@check.has_key?(:ok2), @post.ok2) %></b-icon></span> <%= @post.answer2 %></div></div>
+                    <div class="field"><div class="control"><span style="vertical-align:middle"><%= post_check_icon(@check.has_key?(:ok3), @post.ok3) %></b-icon></span> <%= @post.answer3 %></div></div>
+                    <div class="field"><div class="control"><span style="vertical-align:middle"><%= post_check_icon(@check.has_key?(:ok4), @post.ok4) %></b-icon></span> <%= @post.answer4 %></div></div>
+                    <div class="field"><div class="control"><%= post_check_result(@check, @post) %></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
