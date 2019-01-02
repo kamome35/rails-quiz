@@ -1,24 +1,27 @@
-# README
+# Quiz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Demo
 
-Things you may want to cover:
+- Check
+  ![Check](https://kyoronet.github.io/image-storage/rails-quiz/check.gif)
 
-* Ruby version
+- Post
+  ![Post](https://kyoronet.github.io/image-storage/rails-quiz/post.gif)
 
-* System dependencies
+## Deploy
 
-* Configuration
+### Development
 
-* Database creation
+```bash
+$ bundle install --without production
+$ rails db:migrate
+$ rails server
+```
 
-* Database initialization
+### Production
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ bundle install --without development:test
+$ rails db:migrate
+$ rails server -e production
+```
