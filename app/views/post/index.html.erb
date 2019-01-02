@@ -9,10 +9,10 @@
                 <div class="card-content">
                     <div class="field"><%= post.content %></div>
                     <hr/>
-                    <div class="field"><div class="control"><label class="checkbox"><input type="checkbox"><%= post.answer1 %></label></div></div>
-                    <div class="field"><div class="control"><label class="checkbox"><input type="checkbox"><%= post.answer2 %></label></div></div>
-                    <div class="field"><div class="control"><label class="checkbox"><input type="checkbox"><%= post.answer3 %></label></div></div>
-                    <div class="field"><div class="control"><label class="checkbox"><input type="checkbox"><%= post.answer4 %></label></div></div>
+                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer1 %></b-checkbox></div></div>
+                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer2 %></b-checkbox></div></div>
+                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer3 %></b-checkbox></div></div>
+                    <div class="field"><div class="control"><b-checkbox v-model="checkbox"><%= post.answer4 %></b-checkbox></div></div>
                     <div class="field"><div class="control"><button class="button is-link">回答</button></div></div>
                 </div>
             </div>

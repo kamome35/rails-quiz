@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_02_124904) do
+ActiveRecord::Schema.define(version: 2019_01_02_161923) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 2019_01_02_124904) do
     t.text "answer4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "ok1"
+    t.boolean "ok2"
+    t.boolean "ok3"
+    t.boolean "ok4"
   end
 
 end
