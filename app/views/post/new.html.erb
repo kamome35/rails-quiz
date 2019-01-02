@@ -3,17 +3,17 @@
         <div class="column">
             <div class="card is-shady">
                 <div class="card-image has-text-centered">
-                    投稿内容
+                    <i class="fas fa-edit"></i>
                 </div>
                 <div class="card-content">
-                    <%= form_tag("/create") do %>
-                    <div class="field"><div class="control"><input class="input" type="text" name="content" placeholder="問題文"></div></div>
+                    <%= form_for(@post, url: "/new") do |f| %>
+                    <div class="field"><div class="control"><%= f.text_field :content, class: "input", placeholder: "問題文" %></div></div>
                     <hr/>
-                    <div class="field"><div class="control"><input class="input" type="text" name="answer1" placeholder="回答1"></div></div>
-                    <div class="field"><div class="control"><input class="input" type="text" name="answer2" placeholder="回答2"></div></div>
-                    <div class="field"><div class="control"><input class="input" type="text" name="answer3" placeholder="回答3"></div></div>
-                    <div class="field"><div class="control"><input class="input" type="text" name="answer4" placeholder="回答4"></div></div>
-                    <div class="field"><div class="control"><input type="submit" value="投稿" class="button is-link"></div></div>
+                    <div class="field"><div class="control"><%= f.text_field :answer1, class: "input", placeholder: "回答1" %></div></div>
+                    <div class="field"><div class="control"><%= f.text_field :answer2, class: "input", placeholder: "回答2" %></div></div>
+                    <div class="field"><div class="control"><%= f.text_field :answer3, class: "input", placeholder: "回答3" %></div></div>
+                    <div class="field"><div class="control"><%= f.text_field :answer4, class: "input", placeholder: "回答4" %></div></div>
+                    <div class="field"><div class="control"><%= f.submit "投稿", class: "button is-link" %></div></div>
                     <% end %>
                 </div>
             </div>
